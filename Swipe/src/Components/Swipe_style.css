@@ -1,0 +1,69 @@
+body{
+background-color: red;
+background-image: linear-gradient(160deg, #F1C40F  0%, #1ABC9C  100%);
+background-size: 100% 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.card{
+    background: #000000;
+    border-radius: 3rem;
+    box-shadow: 0 0 15rem -5rem;
+    overflow: hidden;
+}
+.img{
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem
+
+}
+.cardImg{
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+.carImg > img {
+   
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+
+}
+.cardGrid{
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.cardGrideffect{
+    position: relative;
+}
+.cardGrideffect:before{
+    content: "";
+    color: #F4F6F7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+    background: #F4F6F7;
+    transition: 500ms linear all;
+
+}
+.cardGrideffect:hover:before{
+    height: 2rem;
+    width: 2rem;
+    transition: 70ms linear all;
+}
+
